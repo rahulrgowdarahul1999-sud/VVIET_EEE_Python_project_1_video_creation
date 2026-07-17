@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import glob
+
 # Handling MoviePy version differences (v1.x vs v2.x)
 try:
     from moviepy.editor import ImageClip, concatenate_videoclips, AudioFileClip
@@ -89,7 +90,7 @@ def create_video(image_files, duplicate_count, fps, audio_path):
     output_filename = "output_video.mp4"
     final_clip.write_videofile(output_filename, codec="libx264", audio_codec="aac")
     return output_filename
-# --- 3. STREAMLIT UI LOGIC ---
+  # --- 3. STREAMLIT UI LOGIC ---
 
 st.set_page_config(page_title="PragyanAI Video Creator", layout="wide")
 
